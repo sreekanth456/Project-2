@@ -1,0 +1,70 @@
+<div class="mobile-view">
+  <mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <button mat-button color="primary">Home</button>
+      <button mat-button color="primary">Service</button>
+      <button mat-button color="primary">contact</button>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+
+          <span> Vajro Test Store </span>
+
+          <span class="spacer"></span>
+          <mat-icon>add_shopping_cart</mat-icon>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+
+    <cdk-virtual-scroll-viewport itemSize="50" class="scroll">
+    <div class="body-simpler">
+      <div>
+        <mat-card class="slider" *ngFor="let user of users1">
+          <img mat-card-image src="{{ user.image }}" />
+        </mat-card>
+      </div><br>
+
+      <div>
+        <mat-card class="image" *ngFor="let user of users2">
+          <img mat-card-image src="{{ user.image }}" />
+        </mat-card>
+      </div><br>
+      <div>
+
+        <mat-card class="banner" *ngFor="let user of users3">
+          <img mat-card-image src="{{ user.image }}" />
+        </mat-card>
+      </div><br>
+
+      <div>
+
+            <mat-card class="product" *ngFor="let user of users4">
+                    <img mat-card-image src="{{user.image_url}}" />
+                    <mat-card-content>
+                      <p>{{user.title}}</p>
+                      <h4>$ {{user.selling_price}}</h4>
+                  
+                    </mat-card-content>
+            </mat-card>
+          </div><br>
+
+          <div>
+                        <mat-card-title fxLayout="row" fxLayoutAlign="center center"> # INSTAGRAM </mat-card-title>
+                    
+                <mat-card class="insta" *ngFor="let user of users5">
+                  
+                        <img mat-card-image src="{{ user.imageUrl }}" />
+
+                </mat-card>
+              </div><br>
+
+    </div>
+    </cdk-virtual-scroll-viewport>
+
+  </mat-drawer-container>
+</div>

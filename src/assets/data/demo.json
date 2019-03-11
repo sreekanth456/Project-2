@@ -1,0 +1,202 @@
+{
+    "currency": "$",
+    "slider_images": [{
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/ScreenShot2018-11-12at17.43.49_420x.png?v=1542044794",
+            "collections": "http://www.tinyseconds.co.uk/collections/sale",
+            "aspectRatio": "0.8714285714285714"
+        },
+        {
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/My_Post_3_420x.jpg?v=1549231594",
+            "collections": "http://www.tinyseconds.co.uk/collections/character-wear",
+            "aspectRatio": "0.5859"
+        },
+        {
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/ScreenShot2018-12-27at23.17.58_420x.png?v=1545952759",
+            "collections": "http://www.tinyseconds.co.uk/collections/premature",
+            "aspectRatio": "0.5859"
+        }
+    ],
+
+    "image_grid": [{
+            "image": "https://res.cloudinary.com/vajrohq/image/fetch/w_300,h_300,c_fill,g_face,f_auto/https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/Screen_Shot_2018-10-11_at_13.34.39.png?v=1546388740",
+            "url": "http://www.tinyseconds.co.uk/collections/accessories",
+            "name": "Accessories"
+        },
+        {
+            "image": "https://res.cloudinary.com/vajrohq/image/fetch/w_300,h_300,c_fill,g_face,f_auto/https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/bundle.jpg?v=1549305897",
+            "url": "http://www.tinyseconds.co.uk/collections/bundles",
+            "name": "Bundles"
+        },
+        {
+            "image": "https://res.cloudinary.com/vajrohq/image/fetch/w_300,h_300,c_fill,g_face,f_auto/https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/Screen_Shot_2018-10-11_at_13.08.49.png?v=1546388489",
+            "url": "http://www.tinyseconds.co.uk/collections/occasions",
+            "name": "Christmas"
+        },
+        {
+            "image": "https://res.cloudinary.com/vajrohq/image/fetch/w_300,h_300,c_fill,g_face,f_auto/https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/footwear.jpg?v=1546388650",
+            "url": "http://www.tinyseconds.co.uk/collections/footwear",
+            "name": "Footwear"
+        }
+    ],
+    "banner_array": [{
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/ScreenShot2018-11-12at17.43.49_420x.png?v=1542044794",
+            "collections": "http://www.tinyseconds.co.uk/collections/sale",
+            "aspectRatio": 0.8714285714285714
+        },
+        {
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/My_Post_3_420x.jpg?v=1549231594",
+            "collections": "http://www.tinyseconds.co.uk/collections/character-wear",
+            "aspectRatio": "0.5859"
+        },
+        {
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/ScreenShot2018-12-27at23.17.58_420x.png?v=1545952759",
+            "collections": "http://www.tinyseconds.co.uk/collections/premature",
+            "aspectRatio": "0.5859"
+        },
+        {
+            "image": "https://cdn.shopify.com/s/files/1/0018/9025/4946/collections/Screen_Shot_2018-10-11_at_13.08.49_420x.png?v=1546388489",
+            "collections": "http://www.tinyseconds.co.uk/collections/occasions",
+            "aspectRatio": "0.5859"
+        }
+    ],
+    "products": [{
+            "title": "6-9m Floral Outfit",
+            "product_id": 2138944208994,
+            "url": "http://www.tinyseconds.co.uk/products/6-9m-floral-outfit",
+            "retail_price": "1.99",
+            "selling_price": "1.99",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_8cfe2d8e-1674-414c-86d1-95b6f99c8a6e.jpg?v=1551376990"
+        },
+        {
+            "title": "Tommee Tippee One Size Pink Bibs x 2",
+            "product_id": 2138988806242,
+            "url": "http://www.tinyseconds.co.uk/products/tommee-tippee-one-size-pink-bibs-x-2",
+            "retail_price": "2.79",
+            "selling_price": "2.79",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_064dc97b-8c55-4066-ba8b-250e10af0666.jpg?v=1551378601"
+        },
+        {
+            "title": "Tommee Tippee One Size Yellow Bibs x 2",
+            "product_id": 2138989756514,
+            "url": "http://www.tinyseconds.co.uk/products/tommee-tippee-one-size-yellow-bibs-x-2",
+            "retail_price": "2.79",
+            "selling_price": "2.79",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_83f1577d-ccd2-4ee8-b93e-08afdda892f8.jpg?v=1551378650"
+        },
+        {
+            "title": "NEXT 12-18m 2 Piece Dress Outfit",
+            "product_id": 2138990477410,
+            "url": "http://www.tinyseconds.co.uk/products/next-12-18m-2-piece-dress-outfit",
+            "retail_price": "5.79",
+            "selling_price": "5.79",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_91751623-f774-4310-898d-7d3488fe5fd0.jpg?v=1551378688"
+        },
+        {
+            "title": "MiniClub 9-12m All in One",
+            "product_id": 2138991427682,
+            "url": "http://www.tinyseconds.co.uk/products/miniclub-9-12m-all-in-one",
+            "retail_price": "2.99",
+            "selling_price": "2.99",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_2da77e70-4fb8-45d4-ac8c-c11721f6f208.jpg?v=1551378729"
+        },
+        {
+            "title": "MiniClub 9-12m Flower All in One",
+            "product_id": 2138992935010,
+            "url": "http://www.tinyseconds.co.uk/products/miniclub-9-12m-flower-all-in-one",
+            "retail_price": "2.99",
+            "selling_price": "2.99",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_037786dc-2a25-49bf-b0f1-1d9e64462d13.jpg?v=1551378778"
+        },
+        {
+            "title": "MiniClub 9-12m Blue Floral Sleepsuit",
+            "product_id": 2138993885282,
+            "url": "http://www.tinyseconds.co.uk/products/miniclub-9-12m-blue-floral-sleepsuit",
+            "retail_price": "2.79",
+            "selling_price": "2.79",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_b43acf58-1c73-4ccc-ae8c-48933d48f590.jpg?v=1551378824"
+        },
+        {
+            "title": "TU 9-12m Little Birds Sleepsuits Set of 3",
+            "product_id": 2138995327074,
+            "url": "http://www.tinyseconds.co.uk/products/tu-9-12m-little-birds-sleepsuits-set-of-3",
+            "retail_price": "5.79",
+            "selling_price": "5.79",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_77cafeec-8a71-4a0c-bdf6-1394929b301a.jpg?v=1551378878"
+        },
+        {
+            "title": "NEXT 9-12m Dinosaur Sleepsuit",
+            "product_id": 2138996375650,
+            "url": "http://www.tinyseconds.co.uk/products/next-9-12m-dinosaur-sleepsuit",
+            "retail_price": "3.39",
+            "selling_price": "3.39",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_ba451c93-9bc7-4bee-8c1d-296019d2bbdb.jpg?v=1551378921"
+        },
+        {
+            "title": "Mothercare 9-12m Mummy & Daddy Sleepsuits x 2",
+            "product_id": 2138997096546,
+            "url": "http://www.tinyseconds.co.uk/products/mothercare-9-12m-mummy-daddy-sleepsuits-x-2",
+            "retail_price": "5.89",
+            "selling_price": "5.89",
+            "show_retail_price": false,
+            "image_url": "https://cdn.shopify.com/s/files/1/0018/9025/4946/products/image_985fa2a1-846c-4b5e-b300-2412bd8e20c5.jpg?v=1551378964"
+        }
+    ],
+    "instagram_images": [{
+            "instagramUrl": "https://www.instagram.com/p/BtwOOE4hmhl",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/84c13baa83312a7c3ed3f12ef2a96bd5/5C7CA9FF/t51.2885-15/e15/s640x640/51126645_388480508607177_1597486133904252233_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BtoYjG4Blvy",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/faac09dea19004fddd2c500473aa4218/5C7C7A3C/t51.2885-15/e15/s640x640/50594492_1036444523213616_799730390974967791_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BtUrImfB1CH",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/02be421a26eafb25b4b880969b77eb42/5D1863BA/t51.2885-15/sh0.08/e35/s640x640/50758914_254087728842644_2630144047938360531_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BtBhSSfBlNY",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/b10eb3c94943158fa675a64a7f5502bf/5D093BED/t51.2885-15/e35/50748515_1139615879550290_8126261957133726632_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BtBeoAYhMDP",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/ae8c9111dc2491f26fe2d09c6be5d08d/5D0AA519/t51.2885-15/sh0.08/e35/s640x640/49756214_394893284405078_7218337474716320656_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/Bs_afOuBKXO",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/f2daee7d78fc79bc749a7ed65bbec4b8/5D17C756/t51.2885-15/e35/47689772_2239835716261216_1400453884270340474_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/Bs_SnjBhcB6",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/c675ea02c7a195d73c341197334a3a89/5D1D9388/t51.2885-15/e35/50799851_550514365453856_5860010400667552731_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BqisXZGhQ4_",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/a923450a1f16092ecac2d2c1dbb762fb/5D01DE5E/t51.2885-15/sh0.08/e35/s640x640/44711444_121259098791027_160733048719482491_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BqfoeCGhr1Q",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/b89f0a73d21440c68217ab4ecb51b13f/5C7C7C56/t51.2885-15/e15/s640x640/44458964_186165712329181_4153769079025135343_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BqduQYdh72f",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/8cc36471ae70e5e3589441291dc7e6d6/5C7CBCA3/t51.2885-15/e15/s640x640/45354764_516766492065684_4227350659909084252_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BqA4uEkBYlL",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/db0a17637624cb1387d78e756a0540c5/5D251904/t51.2885-15/sh0.08/e35/s640x640/44738326_3228768873900500_5469449116989448430_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        },
+        {
+            "instagramUrl": "https://www.instagram.com/p/BqAXpJrhyY3",
+            "imageUrl": "https://scontent-iad3-1.cdninstagram.com/vp/e60f31dba46714fc1ccd3a00c7492f8a/5D281614/t51.2885-15/e35/43651976_494402331051371_4271115737293144387_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+mat-panel-title{
+
+
+}
+
+mat-icon{
+
+}
+.body-info{
+    display: inline-block;
+    gap: 20px;
+}
+
+
+.card {
+    display: inline-grid;
+    max-width: 210px;
+    /* margin: auto; */
+   
+
+  }
+  
+
+ img{
+     height:240px ;
+     width: 240px ;
+
+ }

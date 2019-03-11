@@ -1,0 +1,75 @@
+.mobile-view{
+
+    position: block;
+    width: 300px;
+    height:100px;
+}
+
+
+
+ .container{
+
+    /* position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0; */
+
+
+}
+.container .mat-drawer{
+
+min-width: 200px;
+
+}
+
+.container .mat-drawer .mat-button{
+
+    display: block;
+    width: 100%;
+    text-align: left;
+
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.container .body-simpler{
+}
+
+.slider {
+    display: inline-grid;
+    max-width: 300px;
+
+  }
+
+  .image{
+    display: inline-grid;
+      max-width : 115px;
+  }
+  .banner{
+    display: inline-grid;
+    max-width : 115px;
+
+  }
+
+  .product{
+    display: inline-grid;
+    max-width : 115px;
+
+  }
+
+  .insta{
+    display: inline-grid;
+    max-width : 65px; 
+  }
+
+
+  .scroll{
+
+    position: block;
+    width: 300px;
+    height:500px;
+
+  }
