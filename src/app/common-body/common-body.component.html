@@ -1,19 +1,21 @@
-    <mat-card class="card" *ngFor="let user of users ">
-      <img mat-card-image src="{{ user.image }}" />
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <mat-card class="card" *ngFor="let user of users">
+    <img mat-card-image src="{{ user.image }}" />
 
-      <mat-card-actions>
-        <mat-button-toggle-group
-          fxLayout="row"
-          fxLayoutAlign="space-between center"
-        >
-          <mat-button-toggle>Upload</mat-button-toggle>
-          <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
-          <mat-button-toggle>
-            <mat-icon (click)="onDelete()">delete</mat-icon>
-          </mat-button-toggle>
-        </mat-button-toggle-group>
-      </mat-card-actions>
-    </mat-card>
+    <mat-card-actions>
+      <mat-button-toggle-group
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+      >
+        <mat-button-toggle>Upload</mat-button-toggle>
+        <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
+        <mat-button-toggle>
+          <mat-icon (click)="onDelete()">delete</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-card-actions>
+  </mat-card>
+</div>
 
   <mat-action-row fxLayout="row" fxLayoutAlign="end center">
     <button mat-stroked-button color="primary">

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { InfoService } from '../info.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
@@ -50,7 +49,6 @@ export class CommonBodyComponent implements OnInit {
     });
 
 }
-
   
 
 }

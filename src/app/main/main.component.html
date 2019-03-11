@@ -1,13 +1,9 @@
 <section class="list">
-  <mat-accordion multi="false" >
-
-    <div>
+  <mat-accordion multi="false">
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
-
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center" >
-            <mat-icon>apps</mat-icon>
-
+        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon>apps</mat-icon>
           Slider Images
         </mat-panel-title>
 
@@ -17,17 +13,12 @@
       </mat-expansion-panel-header>
 
       <app-common-body [users]="users1"></app-common-body>
-     
     </mat-expansion-panel>
-    </div>
-
-    <div>
 
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
-
         <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-            <mat-icon>apps</mat-icon>
+          <mat-icon>apps</mat-icon>
 
           Image Grid
         </mat-panel-title>
@@ -36,19 +27,13 @@
         </div>
       </mat-expansion-panel-header>
 
-            <app-common-body [users]="users2"></app-common-body>
-
+      <app-common-body [users]="users2"></app-common-body>
     </mat-expansion-panel>
 
-    </div>
-
-    <div>
-
-    <mat-expansion-panel hideToggle >
+    <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
-
         <mat-panel-title>
-            <mat-icon>apps</mat-icon>
+          <mat-icon>apps</mat-icon>
 
           Banner Images
         </mat-panel-title>
@@ -58,18 +43,12 @@
       </mat-expansion-panel-header>
 
       <app-common-body [users]="users3"></app-common-body>
-
     </mat-expansion-panel>
 
-    </div>
-
-    <div>
-
-    <mat-expansion-panel hideToggle >
+    <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
-
         <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-            <mat-icon>apps</mat-icon>
+          <mat-icon>apps</mat-icon>
 
           Product Grid
         </mat-panel-title>
@@ -79,15 +58,13 @@
         </div>
       </mat-expansion-panel-header>
 
-      <ng-template matExpansionPanelContent>
-
-        <mat-card class="card" *ngFor="let user of users4" >
-            <img mat-card-image src="{{user.image_url}}" />
-            <mat-card-content>
-              <p>{{user.title}}</p>
-              <h4>$ {{user.selling_price}}</h4>
-          
-            </mat-card-content>
+      <div >
+        <mat-card class="card" *ngFor="let user of users4">
+          <img mat-card-image src="{{ user.image_url }}" />
+          <mat-card-content>
+            <p>{{ user.title }}</p>
+            <h4>$ {{ user.selling_price }}</h4>
+          </mat-card-content>
 
           <mat-button-toggle-group #group="matButtonToggleGroup">
             <mat-button-toggle>
@@ -101,11 +78,9 @@
             </mat-button-toggle>
           </mat-button-toggle-group>
         </mat-card>
-        
-      </ng-template>
-      
-
-      <mat-action-row fxLayout="row" fxLayoutAlign="end center">
+      </div>
+      <div>
+        <mat-action-row fxLayout="row" fxLayoutAlign="end center">
           <button mat-stroked-button color="primary">
             <mat-icon>bookmarks</mat-icon>
           </button>
@@ -114,17 +89,13 @@
           </button>
           <button mat-stroked-button color="primary">Hide</button>
         </mat-action-row>
+      </div>
     </mat-expansion-panel>
 
-    </div>
-
-    <div>
-
-    <mat-expansion-panel hideToggle >
+    <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
-
         <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-            <mat-icon>apps</mat-icon>
+          <mat-icon>apps</mat-icon>
 
           Instagram Grid
         </mat-panel-title>
@@ -133,23 +104,28 @@
           <button mat-stroked-button color="primary">Customise</button>
         </div>
       </mat-expansion-panel-header>
-      <mat-card class="card" *ngFor="let user of users5 ">
-          <img mat-card-image src="{{ user.imageUrl }}" />
-    
-          <mat-card-actions>
-            <mat-button-toggle-group
-              fxLayout="row"
-              fxLayoutAlign="space-between center"
-            >
-              <mat-button-toggle>Upload</mat-button-toggle>
-              <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
-              <mat-button-toggle>
-                <mat-icon (click)="onDelete()">delete</mat-icon>
-              </mat-button-toggle>
-            </mat-button-toggle-group>
-          </mat-card-actions>
-        </mat-card>
-    
+
+      <div>
+      <mat-card class="card" *ngFor="let user of users5">
+        <img mat-card-image src="{{ user.imageUrl }}" />
+
+        <mat-card-actions>
+          <mat-button-toggle-group
+            fxLayout="row"
+            fxLayoutAlign="space-between center"
+          >
+            <mat-button-toggle>Upload</mat-button-toggle>
+            <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
+            <mat-button-toggle>
+              <mat-icon (click)="onDelete()">delete</mat-icon>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </mat-card-actions>
+      </mat-card>
+
+      </div>
+      <div>
+
       <mat-action-row fxLayout="row" fxLayoutAlign="end center">
         <button mat-stroked-button color="primary">
           <mat-icon>bookmarks</mat-icon>
@@ -160,7 +136,7 @@
         <button mat-stroked-button color="primary">Hide</button>
       </mat-action-row>
 
+      </div>
     </mat-expansion-panel>
-    </div>
   </mat-accordion>
 </section>
