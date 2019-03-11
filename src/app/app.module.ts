@@ -16,7 +16,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MainComponent } from './main/main.component';
 import { SubComponent } from './sub/sub.component';
@@ -39,7 +38,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
-    MatConfirmDialogComponent,
     MainComponent,
     SubComponent,
     DeleteDialogComponent,
@@ -68,6 +66,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
   ],
   providers: [InfoService],
   bootstrap: [AppComponent],
-  entryComponents:[MatConfirmDialogComponent,EditDialogComponent,DeleteDialogComponent]
+  entryComponents:[EditDialogComponent,DeleteDialogComponent]
 })
 export class AppModule { }
