@@ -8,6 +8,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class EditDialogComponent implements OnInit {
 
+  rep:string;
+
   constructor(public snackbar:MatSnackBar) { }
 
   ngOnInit() {

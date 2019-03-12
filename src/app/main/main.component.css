@@ -6,6 +6,13 @@ mat-panel-title{
 mat-icon{
 
 }
+
+.list{
+    position: block;
+    width: 850px;
+    height: 100px;
+}
+
 .body-info{
     display: inline-block;
     gap: 20px;

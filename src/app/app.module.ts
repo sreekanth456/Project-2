@@ -26,6 +26,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { ScrollDispatchModule } from "@angular/cdk/scrolling";
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { PannelDeleteDialogComponent } from './pannel-delete-dialog/pannel-delete-dialog.component';
 
 
 
@@ -36,7 +37,8 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     SubComponent,
     DeleteDialogComponent,
     EditDialogComponent,
-    CommonBodyComponent
+    CommonBodyComponent,
+    PannelDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,6 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
   ],
   providers: [InfoService],
   bootstrap: [AppComponent],
-  entryComponents: [EditDialogComponent, DeleteDialogComponent]
+  entryComponents: [EditDialogComponent, DeleteDialogComponent,PannelDeleteDialogComponent]
 })
 export class AppModule {}

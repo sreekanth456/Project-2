@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
 import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { PannelDeleteDialogComponent } from '../pannel-delete-dialog/pannel-delete-dialog.component';
 
 
 @Component({
@@ -50,6 +51,21 @@ export class CommonBodyComponent implements OnInit {
  
     });
 
+}
+
+
+panelDelete(){
+  var dialogRef= this.dialog.open(PannelDeleteDialogComponent,{
+    width:'330px',
+    height:'250px',
+    // position: { top: "15px" },
+    data:{}
+  });
+
+  dialogRef.afterClosed().subscribe(result =>{
+    alert("User choose ${result}");
+    
+  })
 }
 
 // drop(event : CdkDragDrop<string [] >){

@@ -8,24 +8,36 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class DeleteDialogComponent implements OnInit {
 
+  rep:string;
+
   constructor(public snackbar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
   deleteSnackBar(){
-     const snackbarRef = this.snackbar.open('Delete Sucess fully',' Image ',{
+     const snackbarRef = this.snackbar.open('Delete Sucess fully',' UNDO ',{
+
+      horizontalPosition:'start'
 
      });
+     snackbarRef.onAction().subscribe((result)=>{
+      // alert("Undo the save")
+    })
+
 
   }
 
   backSnackBar(){
 
-    const snackbarRef = this.snackbar.open(' Information canot delete', ' ?',{
+    const snackbarRef = this.snackbar.open(' Information canot delete', ' UNDO',{
 
-
+      horizontalPosition:"left"
+    });
+    snackbarRef.onAction().subscribe((result)=>{
+      // alert("Undo the save")
     })
+
   }
 
  
