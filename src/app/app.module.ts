@@ -27,6 +27,8 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { ScrollDispatchModule } from "@angular/cdk/scrolling";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,7 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     MatToolbarModule,
     MatSnackBarModule,
     ScrollDispatchModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [InfoService],
   bootstrap: [AppComponent],

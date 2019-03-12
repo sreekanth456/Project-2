@@ -1,5 +1,6 @@
 <section class="list">
-  <mat-accordion multi="false">
+  <mat-accordion multi="true" >
+
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
@@ -15,7 +16,7 @@
       <app-common-body [users]="users1"></app-common-body>
     </mat-expansion-panel>
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel hideToggle >
       <mat-expansion-panel-header>
         <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
           <mat-icon>apps</mat-icon>
@@ -30,7 +31,7 @@
       <app-common-body [users]="users2"></app-common-body>
     </mat-expansion-panel>
 
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel hideToggle >
       <mat-expansion-panel-header>
         <mat-panel-title>
           <mat-icon>apps</mat-icon>
@@ -58,8 +59,15 @@
         </div>
       </mat-expansion-panel-header>
 
-      <div >
-        <mat-card class="card" *ngFor="let user of users4">
+      <div 
+      cdkDropList 
+      #todoList="cdkDropList"
+      [cdkDropListData]="users4"
+      [cdkDropListConnectedTo]=""
+      (cdkDropListDropped)= "drop($event)"    
+    >
+
+        <mat-card class="card" *ngFor="let user of users4" cdkDrag>
           <img mat-card-image src="{{ user.image_url }}" />
           <mat-card-content>
             <p>{{ user.title }}</p>
@@ -105,8 +113,14 @@
         </div>
       </mat-expansion-panel-header>
 
-      <div>
-      <mat-card class="card" *ngFor="let user of users5">
+      <div 
+      cdkDropList 
+      #todoList="cdkDropList"
+      [cdkDropListData]="users5"
+      [cdkDropListConnectedTo]=""
+      (cdkDropListDropped)= "drop($event)" 
+      >
+      <mat-card class="card" *ngFor="let user of users5" cdkDrag>
         <img mat-card-image src="{{ user.imageUrl }}" />
 
         <mat-card-actions>
@@ -138,5 +152,7 @@
 
       </div>
     </mat-expansion-panel>
+
+
   </mat-accordion>
 </section>

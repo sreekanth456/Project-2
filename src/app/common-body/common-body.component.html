@@ -1,5 +1,10 @@
-<div fxLayout="row" fxLayoutAlign="space-evenly center">
-  <mat-card class="card" *ngFor="let user of users">
+<div class="list" 
+  cdkDropList 
+  #todoList="cdkDropList"
+  [cdkDropListData]="users"
+  [cdkDropListConnectedTo]=""
+  (cdkDropListDropped)= "drop($event)">
+  <mat-card class="card" *ngFor="let user of users" cdkDrag >
     <img mat-card-image src="{{ user.image }}" />
 
     <mat-card-actions>

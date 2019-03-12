@@ -3,7 +3,7 @@ import { InfoService } from "../info.service";
 import { MatDialog } from "@angular/material/dialog";
 import { DeleteDialogComponent } from "../delete-dialog/delete-dialog.component";
 import { EditDialogComponent } from "../edit-dialog/edit-dialog.component";
-import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/drag-drop";
 
 @Component({
   selector: "app-main",
@@ -57,7 +57,20 @@ export class MainComponent implements OnInit {
       alert("User choose ${result}");
     });
   }
-  // drop(event: CdkDragDrop<any>) {
-  //   moveItemInArray(this.users1, event.previousIndex, event.currentIndex);
+
+  // drop(event: CdkDragDrop<string[]>) {
+  //   moveItemInArray(this.users4, event.previousIndex, event.currentIndex);
   // }
+
+  drop(event : CdkDragDrop<string []>){
+
+  if(event.previousContainer === event.container){
+    moveItemInArray(event.container.data,event.previousIndex,event.currentIndex);
+  }else{
+
+    transferArrayItem(event.previousContainer.data,event.container.data,event.previousIndex,event.currentIndex);
+
+  }
+}
+
 }
