@@ -6,6 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class InfoService {
   private _url: string = "/assets/data/demo.json";
+  listOf;
 
   constructor(private _http: HttpClient) {}
 

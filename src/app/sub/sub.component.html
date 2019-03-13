@@ -1,4 +1,3 @@
-
 <div class="mobile-view">
   <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
@@ -17,54 +16,55 @@
           <span> Vajro Test Store </span>
 
           <span class="spacer"></span>
-          <mat-icon>add_shopping_cart</mat-icon>
+          <mat-icon matBadge="4" matBadgeColor="warn"
+            >add_shopping_cart</mat-icon
+          >
         </mat-toolbar-row>
       </mat-toolbar>
     </div>
 
     <cdk-virtual-scroll-viewport itemSize="50" class="scroll">
-      <div class="body-simpler">
-        <div>
-          <!-- <mat-card class="slider" *ngFor="let user of users1">
-            <img mat-card-image src="{{ user.image }}" />
-          </mat-card> -->
+      <div class="list">
+        <div class="slider">
+          <ui-carousel
+            *ngIf="users1"
+            [infinite]="true"
+            [fade]="false"
+            [speed]="200"
+            height="220px"
+            width="300px"
+          >
+            <ui-carousel-item *ngFor="let user of users1">
+              <img [src]="user.image" />
+            </ui-carousel-item>
+          </ui-carousel>
+        </div>
+
+        <div class="image" *ngFor="let user of users2">
+          <img [src]="user.image" />
         </div>
         <br />
+        <div class="banner" *ngFor="let user of users3">
+          <img [src]="user.image" />
+        </div>
 
         <div>
-          <mat-card class="image" *ngFor="let user of users2">
-            <img mat-card-image src="{{ user.image }}" />
-          </mat-card>
-        </div>
-        <br />
-        <div>
-          <mat-card class="banner" *ngFor="let user of users3">
-            <img mat-card-image src="{{ user.image }}" />
-          </mat-card>
-        </div>
-        <br />
-
-        <div>
+          <span fxLayout="row" fxLayoutAlign="center center">New Arrivals</span>
           <mat-card class="product" *ngFor="let user of users4">
-            <img mat-card-image src="{{ user.image_url }}" />
+            <img mat-card-image [src]="user.image_url" />
             <mat-card-content>
               <p>{{ user.title }}</p>
               <h4>$ {{ user.selling_price }}</h4>
             </mat-card-content>
           </mat-card>
         </div>
-        <br />
-
         <div>
-          <mat-card-title fxLayout="row" fxLayoutAlign="center center">
-            # INSTAGRAM
-          </mat-card-title>
+          <span fxLayout="row" fxLayoutAlign="center center">Instagram View</span>
 
-          <mat-card class="insta" *ngFor="let user of users5">
-            <img mat-card-image src="{{ user.imageUrl }}" />
-          </mat-card>
+          <div class="insta" *ngFor="let user of users5">
+            <img [src]="user.image" />
+          </div>
         </div>
-        <br />
       </div>
     </cdk-virtual-scroll-viewport>
   </mat-drawer-container>

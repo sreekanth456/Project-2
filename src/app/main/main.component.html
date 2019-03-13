@@ -6,7 +6,7 @@
 
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+        <mat-panel-title fxLayout="row" fxLayoutAlign="start center" class="title-align">
           <mat-icon>apps</mat-icon>
           Slider Images
         </mat-panel-title>
@@ -62,45 +62,9 @@
         </div>
       </mat-expansion-panel-header>
 
-      <div 
-      cdkDropList 
-      #todoList="cdkDropList"
-      [cdkDropListData]="users4"
-      [cdkDropListConnectedTo]=""
-      (cdkDropListDropped)= "drop($event)"    
-    >
+      <app-common-body [users]='users4' type='product'></app-common-body>
 
-        <mat-card class="card" *ngFor="let user of users4" cdkDrag>
-          <img mat-card-image src="{{ user.image_url }}" />
-          <mat-card-content>
-            <p>{{ user.title }}</p>
-            <h4>$ {{ user.selling_price }}</h4>
-          </mat-card-content>
-
-          <mat-button-toggle-group #group="matButtonToggleGroup">
-            <mat-button-toggle>
-              <mat-button-toggle>Upload</mat-button-toggle>
-            </mat-button-toggle>
-            <mat-button-toggle>
-              <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
-            </mat-button-toggle>
-            <mat-button-toggle value="right">
-              <mat-icon (click)="onDelete()"> delete</mat-icon>
-            </mat-button-toggle>
-          </mat-button-toggle-group>
-        </mat-card>
-      </div>
-      <div>
-        <mat-action-row fxLayout="row" fxLayoutAlign="end center">
-          <button mat-stroked-button color="primary">
-            <mat-icon>bookmarks</mat-icon>
-          </button>
-          <button mat-stroked-button color="primary">
-            <mat-icon>delete</mat-icon>
-          </button>
-          <button mat-stroked-button color="primary">Hide</button>
-        </mat-action-row>
-      </div>
+     
     </mat-expansion-panel>
 
     <mat-expansion-panel hideToggle>
@@ -116,44 +80,9 @@
         </div>
       </mat-expansion-panel-header>
 
-      <div 
-      cdkDropList 
-      #todoList="cdkDropList"
-      [cdkDropListData]="users5"
-      [cdkDropListConnectedTo]=""
-      (cdkDropListDropped)= "drop($event)" 
-      >
-      <mat-card class="card" *ngFor="let user of users5" cdkDrag>
-        <img mat-card-image src="{{ user.imageUrl }}" />
+      <app-common-body [users]= "users5"></app-common-body>
 
-        <mat-card-actions>
-          <mat-button-toggle-group
-            fxLayout="row"
-            fxLayoutAlign="space-between center"
-          >
-            <mat-button-toggle>Upload</mat-button-toggle>
-            <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
-            <mat-button-toggle>
-              <mat-icon (click)="onDelete()">delete</mat-icon>
-            </mat-button-toggle>
-          </mat-button-toggle-group>
-        </mat-card-actions>
-      </mat-card>
-
-      </div>
-      <div>
-
-      <mat-action-row fxLayout="row" fxLayoutAlign="end center">
-        <button mat-stroked-button color="primary">
-          <mat-icon>bookmarks</mat-icon>
-        </button>
-        <button mat-stroked-button color="primary">
-          <mat-icon>delete</mat-icon>
-        </button>
-        <button mat-stroked-button color="primary">Hide</button>
-      </mat-action-row>
-
-      </div>
+     
     </mat-expansion-panel>
 
 
@@ -163,6 +92,6 @@
 </div>
 
 
-<div fxLayout="row" fxLayoutAlign="end start"> 
+<div class="mobile-view"  fxLayout="column" fxLayoutAlign="start end"> 
   <app-sub></app-sub>
 </div>

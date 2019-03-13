@@ -1,16 +1,9 @@
 .mobile-view {
   position: block;
-  width: 310px;
+  width: 320px;
   height: 100px;
 }
 
-.container {
-  /* position: absolute;
-    top:0;
-    right: 0;
-    left:0;
-    bottom: 0; */
-}
 .container .mat-drawer {
   min-width: 200px;
 }
@@ -25,35 +18,62 @@
   flex: 1 1 auto;
 }
 
-.container .body-simpler {
-}
-
 .slider {
-  display: inline-grid;
   max-width: 300px;
 }
 
-.image {
-  display: inline-grid;
-  max-width: 115px;
+.slider img {
+  height: 230px;
+  width: 300px;
 }
+
+.image {
+  display: inline;
+  grid-template-columns: 100px 100px;
+  grid-gap: 10px;
+}
+.image img {
+  padding: 10px;
+  height:135px;
+  width: 135px;
+}
+
 .banner {
-  display: inline-grid;
-  max-width: 115px;
+  display: inline;
+  grid-template-columns: 100px 100px;
+  grid-gap: 10px;
+}
+
+.banner img{
+  padding: 10px;
+  height:135px;
+  width: 135px;
 }
 
 .product {
   display: inline-grid;
-  max-width: 115px;
+  max-width: 110px;
 }
 
 .insta {
-  display: inline-grid;
-  max-width: 65px;
+
+  display: inline;
+  grid-template-columns: 100px 100px;
+  grid-gap: 10px;
+ 
+}
+
+.insta img{
+  padding: 10px;
+  height:135px;
+  width: 135px;
+
 }
 
 .scroll {
   position: block;
   width: 310px;
   height: 500px;
+  border: solid;
 }
+

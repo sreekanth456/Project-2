@@ -27,6 +27,12 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { ScrollDispatchModule } from "@angular/cdk/scrolling";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { PannelDeleteDialogComponent } from './pannel-delete-dialog/pannel-delete-dialog.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
+
+
+
+import { UICarouselModule } from "ui-carousel";
 
 
 
@@ -59,6 +65,8 @@ import { PannelDeleteDialogComponent } from './pannel-delete-dialog/pannel-delet
     MatSnackBarModule,
     ScrollDispatchModule,
     DragDropModule,
+    MatBadgeModule,
+    UICarouselModule
   ],
   providers: [InfoService],
   bootstrap: [AppComponent],

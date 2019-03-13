@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { InfoService } from "../info.service";
-import { MatDialog } from "@angular/material/dialog";
-import { DeleteDialogComponent } from "../delete-dialog/delete-dialog.component";
-import { EditDialogComponent } from "../edit-dialog/edit-dialog.component";
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/drag-drop";
+
 
 @Component({
   selector: "app-main",
@@ -20,7 +17,7 @@ export class MainComponent implements OnInit {
   public users4;
   public users5;
 
-  constructor(private _info: InfoService, private dialog: MatDialog) {}
+  constructor(private _info: InfoService) {}
 
   ngOnInit() {
     this._info.getData().subscribe(data => {
@@ -32,45 +29,6 @@ export class MainComponent implements OnInit {
     });
   }
 
-  onEdit() {
-    const dialogRef = this.dialog.open(EditDialogComponent, {
-      width: "330px",
-      height: "250px",
-      // position: { top: "15px" },
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      alert("User choose ${result}");
-    });
-  }
-
-  onDelete() {
-    const dialogRef = this.dialog.open(DeleteDialogComponent, {
-      width: "330px",
-      height: "250px",
-      // position: { bottom : "20px" },
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      alert("User choose ${result}");
-    });
-  }
-
-  // drop(event: CdkDragDrop<string[]>) {
-  //   moveItemInArray(this.users4, event.previousIndex, event.currentIndex);
-  // }
-
-  drop(event : CdkDragDrop<string []>){
-
-  if(event.previousContainer === event.container){
-    moveItemInArray(event.container.data,event.previousIndex,event.currentIndex);
-  }else{
-
-    transferArrayItem(event.previousContainer.data,event.container.data,event.previousIndex,event.currentIndex);
-
-  }
-}
+  
 
 }

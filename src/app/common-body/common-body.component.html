@@ -1,11 +1,21 @@
-<div class="list" 
-  cdkDropList 
+<div
+  class="list"
+  cdkDropList
   #todoList="cdkDropList"
   [cdkDropListData]="users"
   [cdkDropListConnectedTo]=""
-  (cdkDropListDropped)= "drop($event)">
-  <mat-card class="card" *ngFor="let user of users" cdkDrag >
-    <img mat-card-image src="{{ user.image }}" />
+  (cdkDropListDropped)="drop($event)"
+>
+  <mat-card class="card" *ngFor="let user of users" cdkDrag>
+    <img
+      mat-card-image
+      [src]="type === 'product' ? user.image_url : user.image"
+    />
+
+    <mat-card-content *ngIf="type === 'product'">
+      <p>{{ user.title }}</p>
+      <h4>$ {{ user.selling_price }}</h4>
+    </mat-card-content>
 
     <mat-card-actions>
       <mat-button-toggle-group
@@ -22,12 +32,12 @@
   </mat-card>
 </div>
 
-  <mat-action-row fxLayout="row" fxLayoutAlign="end center">
-    <button mat-stroked-button color="primary">
-      <mat-icon>bookmarks</mat-icon>
-    </button>
-    <button mat-stroked-button color="primary">
-      <mat-icon (click)=panelDelete()>delete</mat-icon>
-    </button>
-    <button mat-stroked-button color="primary">Hide</button>
-  </mat-action-row>
+<mat-action-row fxLayout="row" fxLayoutAlign="end center">
+  <button mat-stroked-button color="primary">
+    <mat-icon>bookmarks</mat-icon>
+  </button>
+  <button mat-stroked-button color="primary">
+    <mat-icon (click)="panelDelete()">delete</mat-icon>
+  </button>
+  <button mat-stroked-button color="primary">Hide</button>
+</mat-action-row>
