@@ -49,8 +49,10 @@
         </div>
 
         <div>
-          <span fxLayout="row" fxLayoutAlign="center center">New Arrivals</span>
-          <mat-card class="product" *ngFor="let user of users4">
+            <span fxLayout="row" fxLayoutAlign="center center">New Arrivals</span>
+
+        <div class="product-view">
+          <mat-card class="product-inside-view" *ngFor="let user of users4">
             <img mat-card-image [src]="user.image_url" />
             <mat-card-content>
               <p>{{ user.title }}</p>
@@ -59,6 +61,7 @@
           </mat-card>
         </div>
         <div>
+          </div>
           <span fxLayout="row" fxLayoutAlign="center center">Instagram View</span>
 
           <div class="insta" *ngFor="let user of users5">

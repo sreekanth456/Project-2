@@ -50,9 +50,15 @@
   width: 135px;
 }
 
-.product {
-  display: inline-grid;
-  max-width: 110px;
+.product-view{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  row-gap: 20px;
+}
+
+.product-inside-view {
+  
+ max-width: 115px;
 }
 
 .insta {
