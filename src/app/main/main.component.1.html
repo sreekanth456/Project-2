@@ -1,0 +1,110 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly start">
+  <section class="list">
+
+    <!-- Expansion pannel  -->
+
+    <mat-accordion multi="false">
+
+      <!-- Slider image view -->
+
+      <mat-expansion-panel hideToggle>
+
+        <!-- Expansion pannel header section -->
+
+        <mat-expansion-panel-header>
+          <mat-panel-title
+            fxLayout="row"
+            fxLayoutAlign="start center"
+          >
+            <mat-icon>apps</mat-icon>
+            Slider Images
+          </mat-panel-title>
+
+          <div>
+            <button mat-stroked-button color="primary">Customise</button>
+          </div>
+        </mat-expansion-panel-header>
+         
+        <!-- get the common data from the child component to parent component  -->
+
+        <app-common-body [(users)]="users1"></app-common-body>
+      </mat-expansion-panel>
+
+      <!-- Image Grid view -->
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>apps</mat-icon>
+
+            Image Grid
+          </mat-panel-title>
+          <div>
+            <button mat-stroked-button color="primary">Customise</button>
+          </div>
+        </mat-expansion-panel-header>
+
+        <app-common-body [(users)]="users2"></app-common-body>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>apps</mat-icon>
+
+            Banner Images
+          </mat-panel-title>
+          <div>
+            <button mat-stroked-button color="primary">Customise</button>
+          </div>
+        </mat-expansion-panel-header>
+
+        <app-common-body [(users)]="users3"></app-common-body>
+      </mat-expansion-panel>
+
+      <!-- Product grid view -->
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>apps</mat-icon>
+
+            Product Grid
+          </mat-panel-title>
+
+          <div>
+            <button mat-stroked-button color="primary">Customise</button>
+          </div>
+        </mat-expansion-panel-header>
+
+        <app-common-body [(users)]="users4" type="product"></app-common-body>
+      </mat-expansion-panel>
+
+      <!-- Instagram grid view -->
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>apps</mat-icon>
+
+            Instagram Grid
+          </mat-panel-title>
+
+          <div>
+            <button mat-stroked-button color="primary">Customise</button>
+          </div>
+        </mat-expansion-panel-header>
+
+        <app-common-body [(users)]="users5"></app-common-body>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+</div>
+<!-- <pre> {{users1| json}}</pre>
+<pre> {{users2| json}}</pre>
+<pre> {{users3| json}}</pre>
+<pre> {{users4| json}}</pre> -->
+
+<div class="mobile-view" fxLayout="column" fxLayoutAlign="start end">
+  <app-sub [users1]="users1" [users2]="users2" [users3]="users3" [users4]="users4" [users5]="users5" ></app-sub>
+</div>

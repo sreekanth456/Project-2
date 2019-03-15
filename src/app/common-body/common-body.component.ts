@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { DeleteDialogComponent } from "../delete-dialog/delete-dialog.component";
 import { EditDialogComponent } from "../edit-dialog/edit-dialog.component";
@@ -16,12 +16,21 @@ import { PannelDeleteDialogComponent } from "../pannel-delete-dialog/pannel-dele
   styleUrls: ["./common-body.component.css"]
 })
 export class CommonBodyComponent implements OnInit {
+
+  @Output() usersChange = new EventEmitter<any>(); 
+
   constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
 
+
+  // parent component parsing the data from child component
+
   @Input() users;
   @Input() type='default';
+
+
+  // Edit button 
 
   onEdit() {
     const dialogRef = this.dialog.open(EditDialogComponent, {
@@ -36,6 +45,8 @@ export class CommonBodyComponent implements OnInit {
     });
   }
 
+  // delete button 
+
   onDelete() {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       width: "330px",
@@ -48,6 +59,8 @@ export class CommonBodyComponent implements OnInit {
       // alert("User choose ${result}");
     });
   }
+
+  // panel delete buuton info 
 
   panelDelete() {
     var dialogRef = this.dialog.open(PannelDeleteDialogComponent, {
@@ -62,19 +75,11 @@ export class CommonBodyComponent implements OnInit {
     });
   }
 
-  // drop(event : CdkDragDrop<string [] >){
-
-  //   if(event.previousContainer === event.container){
-  //     moveItemInArray(event.container.data,event.previousIndex,event.currentIndex);
-  //   }else{
-
-  //     transferArrayItem(event.previousContainer.data,event.container.data,event.previousIndex,event.currentIndex);
-
-  //   }
-  // }
+  
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.users, event.previousIndex, event.currentIndex);
+    this.usersChange.emit(this.users);
   }
 
 

@@ -15,8 +15,11 @@ export class DeleteDialogComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  // when delete the button snackbar information
+
   deleteSnackBar(){
-     const snackbarRef = this.snackbar.open('Delete Sucess fully',' UNDO ',{
+     const snackbarRef = this.snackbar.open('Delete Sucessfully',' UNDO ',{
 
       horizontalPosition:'start'
 
@@ -27,6 +30,8 @@ export class DeleteDialogComponent implements OnInit {
 
 
   }
+
+  // if click the cancel button information
 
   backSnackBar(){
 

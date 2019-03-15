@@ -1,28 +1,32 @@
+<!-- This is common code of the entair applicaton of the expansion panal view and below some button -->
+
+<!-- darg and drop of image grid view  -->
+
 <div
   class="list"
   cdkDropList
-  #todoList="cdkDropList"
-  [cdkDropListData]="users"
-  [cdkDropListConnectedTo]=""
   (cdkDropListDropped)="drop($event)"
 >
+  <!-- Mat card useing the view of images and toolkit  -->
   <mat-card class="card" *ngFor="let user of users" cdkDrag>
     <img
       mat-card-image
       [src]="type === 'product' ? user.image_url : user.image"
     />
 
+    <!-- product view title and selling price information this code useing only product view -->
     <mat-card-content *ngIf="type === 'product'">
       <p>{{ user.title }}</p>
       <h4>$ {{ user.selling_price }}</h4>
     </mat-card-content>
 
+    <!-- button toogles  -->
     <mat-card-actions>
       <mat-button-toggle-group
         fxLayout="row"
         fxLayoutAlign="space-between center"
       >
-        <mat-button-toggle>Upload</mat-button-toggle>
+        <mat-button-toggle>Upload </mat-button-toggle>
         <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
         <mat-button-toggle>
           <mat-icon (click)="onDelete()">delete</mat-icon>

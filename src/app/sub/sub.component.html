@@ -1,3 +1,8 @@
+
+
+
+<!-- Mobile view  -->
+
 <div class="mobile-view">
   <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
@@ -23,6 +28,8 @@
       </mat-toolbar>
     </div>
 
+    <!-- Virtual scrolling of the mobile  view  -->
+
     <cdk-virtual-scroll-viewport itemSize="50" class="scroll">
       <div class="list">
         <div class="slider">
@@ -34,19 +41,29 @@
             height="220px"
             width="300px"
           >
+
+
+          <!-- carsol view useing image scrolling in Slide images  -->
+
+          <!-- Slide Image View  -->
             <ui-carousel-item *ngFor="let user of users1">
               <img [src]="user.image" />
             </ui-carousel-item>
           </ui-carousel>
         </div>
 
+        <!-- image grid -->
+
         <div class="image" *ngFor="let user of users2">
           <img [src]="user.image" />
         </div>
-        <br />
-        <div class="banner" *ngFor="let user of users3">
+
+        <!-- Banner Images  -->
+
+        <div class="image" *ngFor="let user of users3">
           <img [src]="user.image" />
         </div>
+        <!-- Product Grid -->
 
         <div>
             <span fxLayout="row" fxLayoutAlign="center center">New Arrivals</span>
@@ -62,11 +79,16 @@
         </div>
         <div>
           </div>
+
+          <!-- Instagram Grid -->
+
+          <div>
           <span fxLayout="row" fxLayoutAlign="center center">Instagram View</span>
 
-          <div class="insta" *ngFor="let user of users5">
+          <div class="image" *ngFor="let user of users5">
             <img [src]="user.image" />
           </div>
+        </div>
         </div>
       </div>
     </cdk-virtual-scroll-viewport>

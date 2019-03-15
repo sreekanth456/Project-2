@@ -1,98 +1,44 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly start">
+  <section class="list">
+    <!-- Expansion pannel  -->
 
-<div fxLayout="column" fxLayoutAlign="space-evenly start"> 
+    <mat-accordion multi="false">
 
-<section class="list" >
-  <mat-accordion multi="false" >
+      <div cdkDropList (cdkDropListDropped)="drop($event)" >
 
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center" class="title-align">
-          <mat-icon>apps</mat-icon>
-          Slider Images
-        </mat-panel-title>
+      <mat-expansion-panel hideToggle *ngFor="let data of all" cdkDrag>
+        <!-- Expansion pannel header section -->
 
-        <div>
-          <button mat-stroked-button color="primary">Customise</button>
-        </div>
-      </mat-expansion-panel-header>
+        <mat-expansion-panel-header>
+          <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>apps</mat-icon>
+            {{ data.title }}
+          </mat-panel-title>
 
-      <app-common-body [users]="users1"></app-common-body>
-    </mat-expansion-panel>
+          <div>
+            <button mat-stroked-button color="primary">Customise</button>
+          </div>
+        </mat-expansion-panel-header>
 
-    <mat-expansion-panel hideToggle >
-      <mat-expansion-panel-header>
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon>apps</mat-icon>
+        <!-- get the common data from the child component to parent component  -->
 
-          Image Grid
-        </mat-panel-title>
-        <div>
-          <button mat-stroked-button color="primary">Customise</button>
-        </div>
-      </mat-expansion-panel-header>
+        <app-common-body [(users)]="data.users" ></app-common-body>
 
-      <app-common-body [users]="users2"></app-common-body>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel hideToggle >
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon>apps</mat-icon>
-
-          Banner Images
-        </mat-panel-title>
-        <div>
-          <button mat-stroked-button color="primary">Customise</button>
-        </div>
-      </mat-expansion-panel-header>
-
-      <app-common-body [users]="users3"></app-common-body>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon>apps</mat-icon>
-
-          Product Grid
-        </mat-panel-title>
-
-        <div>
-          <button mat-stroked-button color="primary">Customise</button>
-        </div>
-      </mat-expansion-panel-header>
-
-      <app-common-body [users]='users4' type='product'></app-common-body>
-
-     
-    </mat-expansion-panel>
-
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon>apps</mat-icon>
-
-          Instagram Grid
-        </mat-panel-title>
-
-        <div>
-          <button mat-stroked-button color="primary">Customise</button>
-        </div>
-      </mat-expansion-panel-header>
-
-      <app-common-body [users]= "users5"></app-common-body>
-
-     
-    </mat-expansion-panel>
-
-
-  </mat-accordion>
-</section>
-
+      </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+  </section>
 </div>
 
+<div class="mobile-view" fxLayout="column" fxLayoutAlign="start end">
+  <app-sub
 
-<div class="mobile-view"  fxLayout="column" fxLayoutAlign="start end"> 
-  <app-sub></app-sub>
+    [users1]="users1"
+    [users2]="users2"
+    [users3]="users3"
+    [users4]="users4"
+    [users5]="users5"
+
+   
+  ></app-sub>
 </div>
