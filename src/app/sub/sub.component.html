@@ -1,6 +1,3 @@
-
-
-
 <!-- Mobile view  -->
 
 <div class="mobile-view">
@@ -21,9 +18,7 @@
           <span> Vajro Test Store </span>
 
           <span class="spacer"></span>
-          <mat-icon matBadge="4" matBadgeColor="warn"
-            >add_shopping_cart</mat-icon
-          >
+          <mat-icon matBadge="4" matBadgeColor="warn">add_shopping_cart</mat-icon>
         </mat-toolbar-row>
       </mat-toolbar>
     </div>
@@ -32,63 +27,40 @@
 
     <cdk-virtual-scroll-viewport itemSize="50" class="scroll">
       <div class="list">
-        <div class="slider">
-          <ui-carousel
-            *ngIf="users1"
-            [infinite]="true"
-            [fade]="false"
-            [speed]="200"
-            height="220px"
-            width="300px"
-          >
 
 
-          <!-- carsol view useing image scrolling in Slide images  -->
+      
+        <div *ngFor="let values of all">
+          <div class="slider" *ngIf="values.type==='carousel'">
+            <ui-carousel *ngIf="values.users" [infinite]="true" [fade]="false" [speed]="200" height="220px" width="300px">
 
-          <!-- Slide Image View  -->
-            <ui-carousel-item *ngFor="let user of users1">
+
+
+              <ui-carousel-item *ngFor="let user of values.users">
+                <img [src]="user.image" />
+              </ui-carousel-item>
+            </ui-carousel>
+          </div>
+
+          <div *ngIf="values.type==='image'">
+            <div class="image" *ngFor="let user of values.users">
               <img [src]="user.image" />
-            </ui-carousel-item>
-          </ui-carousel>
-        </div>
+            </div>
+          </div>
 
-        <!-- image grid -->
-
-        <div class="image" *ngFor="let user of users2">
-          <img [src]="user.image" />
-        </div>
-
-        <!-- Banner Images  -->
-
-        <div class="image" *ngFor="let user of users3">
-          <img [src]="user.image" />
-        </div>
-        <!-- Product Grid -->
-
-        <div>
+          <div *ngIf="values.type==='product'">
             <span fxLayout="row" fxLayoutAlign="center center">New Arrivals</span>
 
-        <div class="product-view">
-          <mat-card class="product-inside-view" *ngFor="let user of users4">
-            <img mat-card-image [src]="user.image_url" />
-            <mat-card-content>
-              <p>{{ user.title }}</p>
-              <h4>$ {{ user.selling_price }}</h4>
-            </mat-card-content>
-          </mat-card>
-        </div>
-        <div>
+            <div class="product-view">
+              <mat-card class="product-inside-view" *ngFor="let user of values.users">
+                <img mat-card-image [src]="user.image_url" />
+                <mat-card-content>
+                  <p>{{ user.title }}</p>
+                  <h4>$ {{ user.selling_price }}</h4>
+                </mat-card-content>
+              </mat-card>
+            </div>
           </div>
-
-          <!-- Instagram Grid -->
-
-          <div>
-          <span fxLayout="row" fxLayoutAlign="center center">Instagram View</span>
-
-          <div class="image" *ngFor="let user of users5">
-            <img [src]="user.image" />
-          </div>
-        </div>
         </div>
       </div>
     </cdk-virtual-scroll-viewport>

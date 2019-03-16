@@ -2,19 +2,22 @@
 
 <div mat-dialog-content fxLayout="column" fxLayoutAlign="space-between center">
 <p>
-    <mat-form-field >
-        <h3>Title</h3>
-        <input matInput placeholder="Title" />
-        <button mat-raised-button color="primary" [mat-dialog-close]="rep" (click)="titleSnackBar()">Save</button>
-      </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Title">
+          </mat-form-field>
+          <button mat-button color="primary" [mat-dialog-close]="rep" (click)="titleSnackBar()">Save</button>
+
 </p>
 <p>
-      <mat-form-field>
 
-          <h3>Redirect Url</h3>
-          <input matInput placeholder="Redirect Url" />
-        <button mat-raised-button color="primary" [mat-dialog-close]="rep" (click)="redirectSnackBar()">Save</button>
-        </mat-form-field>
+          <mat-form-field appearance="standard">
+              <mat-label>Redirect Url</mat-label>
+              <input matInput placeholder="Redirect Url">
+            </mat-form-field>
+            <button mat-button color="primary" [mat-dialog-close]="rep" (click)="redirectSnackBar()">Save</button>
+
+
       </p>
 
 </div>

@@ -3,42 +3,60 @@
     <!-- Expansion pannel  -->
 
     <mat-accordion multi="false">
+      <!-- Grid views -->
 
-      <div cdkDropList (cdkDropListDropped)="drop($event)" >
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <mat-expansion-panel hideToggle cdkDrag *ngFor="let info of all; let i = index">
+          <!-- Expansion pannel header section -->
 
-      <mat-expansion-panel hideToggle *ngFor="let data of all" cdkDrag>
-        <!-- Expansion pannel header section -->
+          <mat-expansion-panel-header>
+            <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon>apps</mat-icon>
+              {{ info.title }}
+            </mat-panel-title>
 
-        <mat-expansion-panel-header>
-          <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
-            <mat-icon>apps</mat-icon>
-            {{ data.title }}
-          </mat-panel-title>
+            <div>
+              <button mat-stroked-button color="primary">Customise</button>
+            </div>
+          </mat-expansion-panel-header>
 
-          <div>
-            <button mat-stroked-button color="primary">Customise</button>
-          </div>
-        </mat-expansion-panel-header>
+          <!-- get the common data from the child component to parent component  -->
 
-        <!-- get the common data from the child component to parent component  -->
+          <app-common-body  [(users)]="info.users" [type]="info.type"></app-common-body>
 
-        <app-common-body [(users)]="data.users" ></app-common-body>
+          <!-- <app-common-body *ngIf="i!==3"  [(users)]="info.users"></app-common-body>
+          <app-common-body *ngIf="i===3" [(users)]="info.users" type="product"></app-common-body> -->
 
-      </mat-expansion-panel>
+
+          <!-- <div [ngSwitch]="info.users">
+            <span *ngSwitchCase="users1">
+              <app-common-body [(users)]="info.users"></app-common-body>
+            </span>
+            <span *ngSwitchCase="users2">
+              <app-common-body [(users)]="info.users"></app-common-body>
+            </span>
+            <span *ngSwitchCase="users3">
+              <app-common-body [(users)]="info.users"></app-common-body>
+            </span>
+            <span *ngSwitchCase="users4">
+              <app-common-body
+                [(users)]="info.users"
+                type="product"
+              ></app-common-body>
+            </span>
+            <span *ngSwitchCase="users5">
+              <app-common-body [(users)]="info.users"></app-common-body>
+            </span>
+            <span *ngSwitchDefault>N/A</span>
+          </div> -->
+        </mat-expansion-panel>
       </div>
     </mat-accordion>
   </section>
 </div>
 
+<!-- Mobile View -->
+
 <div class="mobile-view" fxLayout="column" fxLayoutAlign="start end">
-  <app-sub
-
-    [users1]="users1"
-    [users2]="users2"
-    [users3]="users3"
-    [users4]="users4"
-    [users5]="users5"
-
-   
-  ></app-sub>
+  <app-sub [all]="all"></app-sub>
 </div>

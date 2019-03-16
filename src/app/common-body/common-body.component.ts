@@ -2,13 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { DeleteDialogComponent } from "../delete-dialog/delete-dialog.component";
 import { EditDialogComponent } from "../edit-dialog/edit-dialog.component";
-import {
-  CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem
-} from "@angular/cdk/drag-drop";
+import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import { PannelDeleteDialogComponent } from "../pannel-delete-dialog/pannel-delete-dialog.component";
-
 
 @Component({
   selector: "app-common-body",
@@ -16,21 +11,19 @@ import { PannelDeleteDialogComponent } from "../pannel-delete-dialog/pannel-dele
   styleUrls: ["./common-body.component.css"]
 })
 export class CommonBodyComponent implements OnInit {
-
-  @Output() usersChange = new EventEmitter<any>(); 
+  
+  @Output() usersChange = new EventEmitter<any>();
 
   constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
 
-
   // parent component parsing the data from child component
 
   @Input() users;
-  @Input() type='default';
+  @Input() type = "default";
 
-
-  // Edit button 
+  // Edit button
 
   onEdit() {
     const dialogRef = this.dialog.open(EditDialogComponent, {
@@ -45,7 +38,7 @@ export class CommonBodyComponent implements OnInit {
     });
   }
 
-  // delete button 
+  // delete button
 
   onDelete() {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
@@ -60,7 +53,7 @@ export class CommonBodyComponent implements OnInit {
     });
   }
 
-  // panel delete buuton info 
+  // panel delete buuton info
 
   panelDelete() {
     var dialogRef = this.dialog.open(PannelDeleteDialogComponent, {
@@ -75,12 +68,8 @@ export class CommonBodyComponent implements OnInit {
     });
   }
 
-  
-
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.users, event.previousIndex, event.currentIndex);
     this.usersChange.emit(this.users);
   }
-
-
 }
