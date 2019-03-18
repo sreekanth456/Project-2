@@ -63,6 +63,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr ;
   row-gap: 20px;
+  padding:4px;
 }
 
 .product-inside-view {

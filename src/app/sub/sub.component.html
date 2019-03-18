@@ -29,12 +29,12 @@
       <div class="list">
 
 
+      <!-- ngFor useing parsing the all data  with the order -->
+      <!-- ngIf display depending up on the drag they check true or false -->
       
         <div *ngFor="let values of all">
           <div class="slider" *ngIf="values.type==='carousel'">
             <ui-carousel *ngIf="values.users" [infinite]="true" [fade]="false" [speed]="200" height="220px" width="300px">
-
-
 
               <ui-carousel-item *ngFor="let user of values.users">
                 <img [src]="user.image" />

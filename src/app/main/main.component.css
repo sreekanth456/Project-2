@@ -7,5 +7,20 @@
 }
 
 
+.main-view{
+    position: relative;
+    top:30px;
+    left:20px;
+}
 
- 
+.title-text{
+    padding: 0.5em;
+
+}
+
+.mobile-view{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+

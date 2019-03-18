@@ -1,4 +1,6 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly start">
+<div class="main-view" >
+
+  <h2 class="title-text">Customize Your App</h2>
   <section class="list">
     <!-- Expansion pannel  -->
 
@@ -10,7 +12,7 @@
           <!-- Expansion pannel header section -->
 
           <mat-expansion-panel-header>
-            <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+            <mat-panel-title fxLayout="row" fxLayoutAlign="start center" >
               <mat-icon>apps</mat-icon>
               {{ info.title }}
             </mat-panel-title>
@@ -57,6 +59,6 @@
 
 <!-- Mobile View -->
 
-<div class="mobile-view" fxLayout="column" fxLayoutAlign="start end">
+<div class="mobile-view" >
   <app-sub [all]="all"></app-sub>
 </div>
