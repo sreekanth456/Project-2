@@ -44,20 +44,54 @@
 
 
 
-/* cursol view  */
+/* image grid view  */
 
-.image_grid{
-  display: inline;
-  grid-template-columns: 100px 100px;
-  grid-gap: 10px;
-
+.style{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  row-gap: 20px;
+  padding:4px;
 }
-.image_grid img {
+.style .image_grid {
+ 
+  position: relative;
+ /* text-align: center; */
+  
+}
+.style .image_grid  img{
   padding: 10px;
+  /* text-align: center; */
   height:130px;
   width: 130px;
 }
 
+.style .image_source{
+  cursor:pointer;
+      position: relative;
+      display: block;
+    }
+  
+  .image_text{
+        position: absolute;
+        top: 50px; right: 0;
+        bottom: 0; left: 10px;
+        opacity: 0;
+        vertical-align: middle;
+        text-align: center;
+  
+
+    }
+  
+    .image_text:hover{
+        opacity: 1;      
+    }
+  
+    .image_text h3{
+        color:white;
+        display: inline-table;
+         vertical-align:middle;
+         line-height:100%;            
+    }
 
 
 /* Banner Grid, Instagram Grid */
