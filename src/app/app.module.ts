@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // reactive forms modules
 import { ReactiveFormsModule } from "@angular/forms";
 
+import { FormsModule} from "@angular/forms"
+
 // Components
 
 import { MainComponent } from "./main/main.component";
@@ -78,7 +80,8 @@ import { UICarouselModule } from "ui-carousel";
     ScrollDispatchModule,
     DragDropModule,
     MatBadgeModule,
-    UICarouselModule
+    UICarouselModule,
+    FormsModule
   ],
   providers: [InfoService],
   bootstrap: [AppComponent],

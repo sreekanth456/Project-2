@@ -7,6 +7,6 @@
 <p> You’re About to delete an item from this widget.Are you Sure you want to delete it? </p>
 </div>
 <div mat-dialog-action fxLayout="row" fxLayoutAlign="space-evenly center"> 
-    <button mat-raised-button color="primary" [mat-dialog-close]="rep" (click)="deleteSnackBar()">Yes, Delete it !  </button>
-    <button mat-raised-button color="accent" [mat-dialog-close]="rep" (click)="backSnackBar()">Cancel </button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="deleteSnackBar()">Yes, Delete it !  </button>
+    <button mat-raised-button color="accent" mat-dialog-close >Cancel </button>
 </div>

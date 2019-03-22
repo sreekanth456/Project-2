@@ -1,51 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component, OnInit} from "@angular/core";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-delete-dialog',
-  templateUrl: './delete-dialog.component.html',
-  styleUrls: ['./delete-dialog.component.css']
+  selector: "app-delete-dialog",
+  templateUrl: "./delete-dialog.component.html",
+  styleUrls: ["./delete-dialog.component.css"]
 })
 export class DeleteDialogComponent implements OnInit {
+  rep: string;
 
-  rep:string;
 
-  constructor(public snackbar: MatSnackBar) { }
+  constructor(
+    public snackbar: MatSnackBar) {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 
   // when delete the button snackbar information
 
-  deleteSnackBar(){
-     const snackbarRef = this.snackbar.open('Delete Sucessfully',' UNDO ',{
-
-      horizontalPosition:'start'
-
-     });
-     snackbarRef.onAction().subscribe((result)=>{
-      // alert("Undo the save")
-    })
-
-
-  }
-
-  // if click the cancel button information
-
-  backSnackBar(){
-
-    const snackbarRef = this.snackbar.open(' Information canot delete', ' UNDO',{
-
-      horizontalPosition:"left"
+  deleteSnackBar() {
+    const snackbarRef = this.snackbar.open("Delete Sucessfully", " UNDO ", {
+      horizontalPosition: "start"
     });
-    snackbarRef.onAction().subscribe((result)=>{
+    snackbarRef.onAction().subscribe(result => {
       // alert("Undo the save")
-    })
-
+    });
   }
 
- 
-  
 
 }

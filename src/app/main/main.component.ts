@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 import { InfoService } from "../info.service";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: "app-main",
@@ -18,7 +19,19 @@ export class MainComponent implements OnInit {
 
   all = [];
 
-  constructor(private _info: InfoService) {}
+
+
+  // hide functanality
+
+  indexExpanded: number = -1;
+
+  togglePanels(index: number) {
+      this.indexExpanded = index == this.indexExpanded ? -1 : index;
+  }
+
+
+
+  constructor(private _info: InfoService,private dialog:MatDialog) {}
 
   ngOnInit() {
     this._info.getData().subscribe(data => {
@@ -30,7 +43,7 @@ export class MainComponent implements OnInit {
 
       this.all = [
         { title: "Slider Images", users: this.users1, type: "carousel" },
-        { title: "Image Grid", users: this.users2, type: "image" },
+        { title: "Image Grid", users: this.users2, type: "image_grid" },
         { title: "Banner Images", users: this.users3, type: "image" },
         { title: "Product Grid", users: this.users4, type: "product" },
         { title: "Instagram Grid", users: this.users5, type: "image" }
@@ -42,4 +55,17 @@ export class MainComponent implements OnInit {
     moveItemInArray(this.all, event.previousIndex, event.currentIndex);
     console.log(this.all);
   }
+
+
+  panelDelete(index) {    
+    this.all = this.all.filter((users, i) => i !== index)
+
+  }
+  Bookmarks(index){
+    this.all = [...this.all, this.all[index]]
+
+  }
+
+
+
 }

@@ -13,4 +13,6 @@ export class InfoService {
     return this._http.get<any>(this._url);
   }
 
+
+
 }

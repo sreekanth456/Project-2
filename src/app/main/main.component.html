@@ -8,7 +8,8 @@
       <!-- Grid views -->
 
       <div cdkDropList (cdkDropListDropped)="drop($event)">
-        <mat-expansion-panel hideToggle cdkDrag *ngFor="let info of all; let i = index">
+        <mat-expansion-panel hideToggle cdkDrag *ngFor="let info of all; let i = index" [expanded]="indexExpanded == i" disabled="false"
+        >
           <!-- Expansion pannel header section -->
 
           <mat-expansion-panel-header>
@@ -51,6 +52,17 @@
             </span>
             <span *ngSwitchDefault>N/A</span>
           </div> -->
+
+          <mat-action-row fxLayout="row" fxLayoutAlign="end center">
+            <button mat-stroked-button (click)="Bookmarks(i)" color="primary">
+              <mat-icon>bookmarks</mat-icon>
+            </button>
+            <button mat-stroked-button color="primary">
+              <mat-icon (click)="panelDelete(i)">delete</mat-icon>
+            </button>
+            <button mat-stroked-button color="primary" (click)="togglePanels(i)" >Hide</button>
+          </mat-action-row>
+
         </mat-expansion-panel>
       </div>
     </mat-accordion>

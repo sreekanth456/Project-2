@@ -8,7 +8,7 @@
   (cdkDropListDropped)="drop($event)"
 >
   <!-- Mat card useing the view of images and toolkit  -->
-  <mat-card class="card" *ngFor="let user of users" cdkDrag>
+  <mat-card class="card" *ngFor="let user of users; let i = index" cdkDrag>
     <img
       mat-card-image
       [src]="type === 'product' ? user.image_url : user.image"
@@ -24,24 +24,15 @@
     <mat-card-actions>
       <mat-button-toggle-group
         fxLayout="row"
-        fxLayoutAlign="space-between center"
+        fxLayoutAlign="space-between center" 
       >
         <mat-button-toggle>Upload </mat-button-toggle>
-        <mat-button-toggle (click)="onEdit()">Edit</mat-button-toggle>
+        <mat-button-toggle (click)="onEdit(i)">Edit</mat-button-toggle>
         <mat-button-toggle>
-          <mat-icon (click)="onDelete()">delete</mat-icon>
+          <mat-icon (click)="onDelete(i)" matTooltip="Delete">delete</mat-icon>
         </mat-button-toggle>
       </mat-button-toggle-group>
     </mat-card-actions>
   </mat-card>
 </div>
 
-<mat-action-row fxLayout="row" fxLayoutAlign="end center">
-  <button mat-stroked-button color="primary">
-    <mat-icon>bookmarks</mat-icon>
-  </button>
-  <button mat-stroked-button color="primary">
-    <mat-icon (click)="panelDelete()">delete</mat-icon>
-  </button>
-  <button mat-stroked-button color="primary">Hide</button>
-</mat-action-row>

@@ -42,6 +42,15 @@
             </ui-carousel>
           </div>
 
+          <div *ngIf="values.type==='image_grid'">
+            <div class="image" *ngFor="let user of values.users">
+              <!-- <img [src]="user.image"/> -->
+              <!-- <span >{{user.name}}</span> -->
+              <div><img [src]="user.image"/> {{user.name}}</div>
+            </div>
+          </div>
+
+
           <div *ngIf="values.type==='image'">
             <div class="image" *ngFor="let user of values.users">
               <img [src]="user.image" />

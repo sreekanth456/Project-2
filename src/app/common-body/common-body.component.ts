@@ -3,7 +3,6 @@ import { MatDialog } from "@angular/material/dialog";
 import { DeleteDialogComponent } from "../delete-dialog/delete-dialog.component";
 import { EditDialogComponent } from "../edit-dialog/edit-dialog.component";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
-import { PannelDeleteDialogComponent } from "../pannel-delete-dialog/pannel-delete-dialog.component";
 
 @Component({
   selector: "app-common-body",
@@ -13,6 +12,7 @@ import { PannelDeleteDialogComponent } from "../pannel-delete-dialog/pannel-dele
 export class CommonBodyComponent implements OnInit {
   
   @Output() usersChange = new EventEmitter<any>();
+  
 
   constructor(public dialog: MatDialog) {}
 
@@ -23,24 +23,8 @@ export class CommonBodyComponent implements OnInit {
   @Input() users;
   @Input() type = "default";
 
-  // Edit button
 
-  onEdit() {
-    const dialogRef = this.dialog.open(EditDialogComponent, {
-      width: "330px",
-      height: "250px",
-      // position: { top: "15px" },
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      alert("User choose ${result}");
-    });
-  }
-
-  // delete button
-
-  onDelete() {
+  onDelete(index) {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       width: "330px",
       height: "250px",
@@ -50,13 +34,22 @@ export class CommonBodyComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       // alert("User choose ${result}");
+      
+      console.log(`Dialog result: ${result}`);
+      if (result){
+      this.users = this.users.filter((users, i) => i !== index)
+      }
+      this.usersChange.emit(this.users);
     });
   }
 
-  // panel delete buuton info
 
-  panelDelete() {
-    var dialogRef = this.dialog.open(PannelDeleteDialogComponent, {
+
+
+  // Edit button
+
+  onEdit(index) {
+    const dialogRef = this.dialog.open(EditDialogComponent, {
       width: "330px",
       height: "250px",
       // position: { top: "15px" },
@@ -65,9 +58,18 @@ export class CommonBodyComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       // alert("User choose ${result}");
+
+      console.log(`Dialog result: ${result}`);
+      this.users[index].name=result
+      this.usersChange.emit(this.users);
+
     });
   }
 
+  // delete button
+
+ 
+  
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.users, event.previousIndex, event.currentIndex);
     this.usersChange.emit(this.users);
