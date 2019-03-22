@@ -24,6 +24,8 @@ export class CommonBodyComponent implements OnInit {
   @Input() type = "default";
 
 
+        // delete button
+
   onDelete(index) {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       width: "330px",
@@ -31,6 +33,7 @@ export class CommonBodyComponent implements OnInit {
       // position: { top: "15px" },
       data: {}
     });
+
 
     dialogRef.afterClosed().subscribe(result => {
       // alert("User choose ${result}");
@@ -66,7 +69,6 @@ export class CommonBodyComponent implements OnInit {
     });
   }
 
-  // delete button
 
  
   
